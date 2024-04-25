@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-page2',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class Page2Component {
 
+  id:string|undefined; 
+
+  constructor(private route:ActivatedRoute) {}
+
+  ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      this.id = params['id'];
+    })
+  }
 }

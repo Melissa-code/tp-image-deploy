@@ -9,8 +9,9 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'page1', component: Page1Component },
-  { path: 'page2', component: Page2Component },
+  { path: 'page2/:id', component: Page2Component },
   { path: 'page3', component: Page3Component },
+  { path: '', redirectTo: 'pokemons', pathMatch: 'full' }, 
 ];
 
 @NgModule({
